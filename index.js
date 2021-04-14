@@ -61,7 +61,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribution',
-        message: 'After installation, who or what contributed to your program?',
+        message: 'Who has contributed to your program?',
         validate: contributionInput => {
             if (contributionInput) {
                 return true;
@@ -84,14 +84,31 @@ const questions = [
             }
         }
     }
-]
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
+async function saveFile (questionPrompt){
+    try{
+    const information = await inquirer.prompt(questionPrompt)
+    
+    .then((answers) => {
+        console.log(answers);
+        return JSON.stringify(answers);
+    })
+
+    .then((stringOutput) => console.log(stringOutput))
+
+    fsPromises.writeFile('readMe.md', information)
+    } catch (error){
+        console.error(error)
+    }
+}
 // TODO: Create a function to initialize app
-function init() {}
+function init(questionPrompt) {
+    saveFile(questionPrompt);
+}
 
 // Function call to initialize app
-init();
+init(questions);
