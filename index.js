@@ -3,7 +3,7 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 const fsPromises = fs.promises
 const generateMarkdown = require('./utils/generateMarkdown.js');
-const { generateKeyPair } = require('crypto');
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -100,7 +100,22 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fsPromises.writeFile(fileName, data, err => {
+            // if theres an error, reject the primise and send the error to the promises catch method
+            if (err) {
+                reject(err);
+                //return out fo the function to make sure the promise doesnt accidentally execute the resolve function
+                return;
+            }
+
+            // if everything went well, reseolve the promise and send the successful promise to the then() statement
+            resolve({
+                ok: true,
+                message: 'file created!'
+            });
+        })
+}
 
 async function saveFile (questionPrompt){
     try{
@@ -116,20 +131,7 @@ async function saveFile (questionPrompt){
 
         console.log("Generating README")
         // writing file
-        await fsPromises.writeFile('./dist/README.md', generatedMD, err => {
-            // if theres an error, reject the primise and send the error to the promises catch method
-            if (err) {
-                reject(err);
-                //return out fo the function to make sure the promise doesnt accidentally execute the resolve function
-                return;
-            }
-
-            // if everything went well, reseolve the promise and send the successful promise to the then() statement
-            resolve({
-                ok: true,
-                message: 'file created!'
-            });
-        })
+        await writeToFile('./dist/README.md', generatedMD)
     } finally {
         console.log("README is generated in the dist folder!")
     }
