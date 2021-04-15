@@ -36,9 +36,9 @@ function renderLicenseSection(license) {
     return "";
   } else {
     return `
-    ## License
-    This project is covered under the ${license} license.
-    [Click here to see the terms of the license](${renderLicenseLink(license)})`
+## License
+This project is covered under the ${license} license.
+[Click here to see the terms of the license](${renderLicenseLink(license)})`
   }
   
 }
@@ -141,7 +141,12 @@ ${data.test}`
 } 
 
 if (data.license !== 'none') {
-  runningMarkdown += renderLicenseSection(data.license);
+
+var licenseSection = renderLicenseSection(data.license);
+  
+console.log(licenseSection);
+runningMarkdown += `
+${licenseSection}`
 }
 
 runningMarkdown += `

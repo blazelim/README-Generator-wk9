@@ -19,9 +19,10 @@ This is where the description of your project would be
 This is how others can contribute to your project
 ## Test
 This is where you can describe possible tests for your projects
-    ## License
-    This project is covered under the MIT license.
-    [Click here to see the terms of the license](https://choosealicense.com/licenses/mit/)
+
+## License
+This project is covered under the MIT license.
+[Click here to see the terms of the license](https://choosealicense.com/licenses/mit/)
 ## Questions
 Any questions or concerns?
 Contact me on my github: [blazelim](https://github.com/blazelim/)
