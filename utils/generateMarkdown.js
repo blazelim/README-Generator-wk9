@@ -56,12 +56,12 @@ function generateMarkdown(data) {
   
   if (data.installation !== '') {
     runningToC += `
-    * [Installation](#installation)`
+* [Installation](#installation)`
   }
 
   if (data.usage !== '') {
     runningToC += `
-    * [Usage](#usage)`
+* [Usage](#usage)`
   }
 
   runningMarkdown += runningToC
@@ -69,16 +69,16 @@ function generateMarkdown(data) {
   // adding installation instruction section
   if (data.installation !== '') {
     let instructions = `
-    ## Installation
-    ${data.installation}`
+## Installation
+${data.installation}`
 
     runningMarkdown += instructions;
   }
     // adding usage section
     if (data.usage !== '') {
       let usageSection = `
-      ## Installation Instructions
-      ${data.usage}`
+## Usage
+${data.usage}`
   
       runningMarkdown += usageSection;
     }
