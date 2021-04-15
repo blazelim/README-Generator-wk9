@@ -37,7 +37,7 @@ function renderLicenseSection(license) {
   } else {
     return `
     ## License
-    This project is covered under the ${license} license/
+    This project is covered under the ${license} license.
     [Click here to see the terms of the license](${renderLicenseLink(license)})`
   }
   
@@ -141,7 +141,7 @@ ${data.test}`
 } 
 
 if (data.license !== 'none') {
-  runningToC += renderLicenseSection(data.license);
+  runningMarkdown += renderLicenseSection(data.license);
 }
 
 runningMarkdown += `
