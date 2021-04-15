@@ -7,7 +7,7 @@ function renderLicenseBadge(license) {
 
     var modifiedLicense = license.replace(" ", "_")
 
-    return `![Badge for License](https://img.shields.io/badge/license-${modifiedLicense}}-blueviolet)`
+    return `![Badge for License](https://img.shields.io/badge/license-${modifiedLicense}-blueviolet)`
   }
 }
 
@@ -30,22 +30,63 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-
-  console.log(data.name)
-  console.log(data.description)
+  console.log(data.github) //required
+  console.log(data.name) //required
+  console.log(data.description) //required
+  // TOC
   console.log(data.installation)
   console.log(data.usage)
-  console.log(data.contribution)
-  console.log(data.email)
+  console.log(data.contribution) //required
+  console.log(data.email) //required
   console.log(data.test)
   console.log(data.license)
+ 
 
-  return `
+  let runningMarkdown = `
   # ${data.name}
-
   ${renderLicenseBadge(data.license)}
 
-`;
+  ## Description
+  ${data.description}`
+  
+  let runningToC = `
+  ## Table of Contents
+  `;
+
+  
+  if (data.installation !== '') {
+    runningToC += `
+    * [Installation](#installation)`
+  }
+
+  if (data.usage !== '') {
+    runningToC += `
+    * [Usage](#usage)`
+  }
+
+  // adding installation instruction section
+  if (data.installation !== '') {
+    let instructions = `
+    ## Installation
+    ${data.installation}`
+
+    runningMarkdown += instructions;
+  }
+    // adding usage section
+    if (data.usage !== '') {
+      let usageSection = `
+      ## Installation Instructions
+      ${data.usage}`
+  
+      runningMarkdown += usageSection;
+    }
+  
+
+// * [Usage](#usage)
+// * [Credits](#credits)
+// * [License](#license)
+
+;
 }
 
 module.exports = generateMarkdown;
