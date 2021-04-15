@@ -37,8 +37,8 @@ function renderLicenseSection(license) {
   } else {
     return `
     ## License
-    This project is covered under the ${data.license} license/
-    [Click here to see the terms of the license](${renderLicenseLink(data.license)})`
+    This project is covered under the ${license} license/
+    [Click here to see the terms of the license](${renderLicenseLink(license)})`
   }
   
 }
@@ -134,20 +134,21 @@ runningMarkdown += contributingSection;
 // adding test section to markdown
 if (data.test !== '') {
   let testSection = `
-## Contributing
+## Test
 ${data.test}`
   
   runningMarkdown += testSection;
-}
+} 
 
 if (data.license !== 'none') {
-  runningToC += renderLicenseLink(data.license);
+  runningToC += renderLicenseSection(data.license);
 }
 
 runningMarkdown += `
 ## Questions
-Any questions or concerts?
+Any questions or concerns?
 Contact me on my github: [${data.github}](https://github.com/${data.github}/)
+
 Or email me at: ${data.email}`
 
 

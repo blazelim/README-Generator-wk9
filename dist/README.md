@@ -3,7 +3,7 @@
 ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
 
 ## Description
-This is where the description of your project would be. 
+This is where the description of your project would be
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -12,14 +12,15 @@ This is where the description of your project would be.
 * [License](#license)
 * [Questions](#questions)
 ## Installation
-1. This is your first step, 2. this is your second step
+1. This is the first step of your installation process, 2. This is the second step of your installation process
 ## Usage
-1. this is the first step of using the project, 2. this is the second step of using your project
+ 1. this is the first step of using your project, 2. this is the second step of using your project
 ## Contributing
-This is where you would describe to the community how they can contribute to your project
-## Contributing
-run a test by ____________
+This is how others can contribute to your project
+## Test
+This is where you can describe possible tests for your projects
 ## Questions
-Any questions or concerts?
+Any questions or concerns?
 Contact me on my github: [blazelim](https://github.com/blazelim/)
-Or email me at: FakeEmail@hotmail.com
+
+Or email me at: ThisIsAFakeEmail@gmail.com
