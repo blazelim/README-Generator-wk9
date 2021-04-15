@@ -104,25 +104,37 @@ function writeToFile(fileName, data) {}
 
 async function saveFile (questionPrompt){
     try{
-    const information = await inquirer.prompt(questionPrompt)
-    
-    .then((answers) => {
+        const answers = await inquirer.prompt(questionPrompt);
+        console.log("Information gathered!")
+
+        // TODO remove console log
         console.log(answers);
-        return answers;
-    })
 
-    .then((answers) => {
-        let generatedMD = generateMarkdown(answers);
-        return generatedMD
-    })
+        console.log("Generating Markdown");
 
-    // .then((stringOutput) => console.log(stringOutput))
+        let generatedMD = await generateMarkdown(answers);
 
-    // fsPromises.writeFile('readMe.md', information)
-    } catch (error){
-         console.error(error)
-     }
+        console.log("Generating README")
+        // writing file
+        await fsPromises.writeFile('./dist/README.md', generatedMD, err => {
+            // if theres an error, reject the primise and send the error to the promises catch method
+            if (err) {
+                reject(err);
+                //return out fo the function to make sure the promise doesnt accidentally execute the resolve function
+                return;
+            }
+
+            // if everything went well, reseolve the promise and send the successful promise to the then() statement
+            resolve({
+                ok: true,
+                message: 'file created!'
+            });
+        })
+    } finally {
+        console.log("README is generated in the dist folder!")
+    }
 }
+
 // TODO: Create a function to initialize app
 function init(questionPrompt) {
     saveFile(questionPrompt);
