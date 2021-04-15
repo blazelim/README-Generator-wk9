@@ -131,7 +131,7 @@ async function saveFile (questionPrompt){
 
         console.log("Generating README")
         // writing file
-        await writeToFile('./dist/README.md', generatedMD)
+        writeToFile('./dist/README.md', generatedMD)
     } finally {
         console.log("README is generated in the dist folder!")
     }

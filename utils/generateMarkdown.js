@@ -3,6 +3,13 @@
 function renderLicenseBadge(license) {
   if (license === "none") {
     return "";
+  } else {
+
+    //var modifiedLicense = license.replace(" ",)
+
+    return `
+    ![Badge for License](https://img.shields.io/badge/license-${license}-blueviolet)
+    `
   }
 }
 
@@ -24,8 +31,20 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
+  console.log(data.name)
+  console.log(data.description)
+  console.log(data.installation)
+  console.log(data.usage)
+  console.log(data.contribution)
+  console.log(data.email)
+  console.log(data.test)
+  console.log(data.license)
+
   return `
-  # ${data.title}
+  # ${data.name}
+
+  ${renderLicenseBadge(data.license)}
 
 `;
 }
