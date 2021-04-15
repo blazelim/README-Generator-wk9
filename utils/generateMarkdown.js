@@ -43,15 +43,14 @@ function generateMarkdown(data) {
  
 
   let runningMarkdown = `
-  # ${data.name}
-  ${renderLicenseBadge(data.license)}
+# ${data.name}
+${renderLicenseBadge(data.license)}
 
-  ## Description
-  ${data.description}`
+## Description
+${data.description}`
   
   let runningToC = `
-  ## Table of Contents
-  `;
+## Table of Contents`;
 
   
   if (data.installation !== '') {

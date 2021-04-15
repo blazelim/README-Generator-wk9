@@ -1,14 +1,13 @@
 
-  # name of project
-  ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
+# this is the name
+![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
 
-  ## Description
-  description of project
-  ## Table of Contents
-  
+## Description
+this is the description
+## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 ## Installation
-installation procedure!
+this is how you install it
 ## Usage
-usage procedure!
+this is how you use it
