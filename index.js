@@ -2,7 +2,8 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 const fsPromises = fs.promises
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const { generateKeyPair } = require('crypto');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -83,7 +84,19 @@ const questions = [
                 return false;
             }
         }
-    }
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'If applicable, please describe any tests for your program (enter blank for no tests)',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What license would you like to put on your program?',
+        choices: ["none", "MIT", "GNU GPLv3" , "Apache 2.0", "ISC License"]
+    },
+
 ];
 
 // TODO: Create a function to write README file
@@ -95,15 +108,20 @@ async function saveFile (questionPrompt){
     
     .then((answers) => {
         console.log(answers);
-        return JSON.stringify(answers);
+        return answers;
     })
 
-    .then((stringOutput) => console.log(stringOutput))
+    .then((answers) => {
+        let generatedMD = generateMarkdown(answers);
+        return generatedMD
+    })
 
-    fsPromises.writeFile('readMe.md', information)
+    // .then((stringOutput) => console.log(stringOutput))
+
+    // fsPromises.writeFile('readMe.md', information)
     } catch (error){
-        console.error(error)
-    }
+         console.error(error)
+     }
 }
 // TODO: Create a function to initialize app
 function init(questionPrompt) {
