@@ -64,6 +64,8 @@ function generateMarkdown(data) {
     * [Usage](#usage)`
   }
 
+  runningMarkdown += runningToC
+
   // adding installation instruction section
   if (data.installation !== '') {
     let instructions = `
@@ -86,6 +88,7 @@ function generateMarkdown(data) {
 // * [Credits](#credits)
 // * [License](#license)
 
+return runningMarkdown;
 ;
 }
 
