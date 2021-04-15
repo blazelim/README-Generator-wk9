@@ -60,16 +60,8 @@ const questions = [
 
     {
         type: 'input',
-        name: 'contribution',
-        message: 'Who has contributed to your program? (Required)',
-        validate: contributionInput => {
-            if (contributionInput) {
-                return true;
-            } else {
-                console.log('Please input everyone that has contributed to your project, yourself included!');
-                return false;
-            }
-        }
+        name: 'contributing',
+        message: 'If applicable, describe how others can contribute to your project!',
     },
     {
         type:'input',
