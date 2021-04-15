@@ -2,6 +2,6 @@
   # Bleezys project
 
   
-    ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
+  ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
     
 
