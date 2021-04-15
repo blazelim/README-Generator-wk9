@@ -29,7 +29,7 @@ function renderLicenseLink(license) {
   //["none", "MIT", "GNU GPLv3" , "Apache 2.0", "ISC License"
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === "none") {
@@ -43,20 +43,10 @@ This project is covered under the ${license} license.
   
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data.github) //required
-  console.log(data.name) //required
-  console.log(data.description) //required
-  // TOC
-  console.log(data.installation)
-  console.log(data.usage)
-  console.log(data.contributing)
-  console.log(data.email) //required
-  console.log(data.test)
-  console.log(data.license)
- 
 
+// markdown for title and description
 let runningMarkdown = `
 # ${data.name}
 ${renderLicenseBadge(data.license)}
@@ -140,6 +130,7 @@ ${data.test}`
   runningMarkdown += testSection;
 } 
 
+// adding license section
 if (data.license !== 'none') {
 
 var licenseSection = renderLicenseSection(data.license);
@@ -149,6 +140,7 @@ runningMarkdown += `
 ${licenseSection}`
 }
 
+// adding questions section
 runningMarkdown += `
 ## Questions
 Any questions or concerns?
@@ -156,7 +148,7 @@ Contact me on my github: [${data.github}](https://github.com/${data.github}/)
 
 Or email me at: ${data.email}`
 
-
+// return markdown to index.js
 return runningMarkdown;
 };
 

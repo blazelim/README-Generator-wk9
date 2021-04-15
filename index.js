@@ -90,7 +90,7 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     fsPromises.writeFile(fileName, data, err => {
             // if theres an error, reject the primise and send the error to the promises catch method
@@ -108,13 +108,12 @@ function writeToFile(fileName, data) {
         })
 }
 
-async function saveFile (questionPrompt){
+//function to initialize app
+async function init (questionPrompt){
     try{
+        // creating inquirer
         const answers = await inquirer.prompt(questionPrompt);
         console.log("Information gathered!")
-
-        // TODO remove console log
-        console.log(answers);
 
         console.log("Generating Markdown");
 
@@ -126,11 +125,6 @@ async function saveFile (questionPrompt){
     } finally {
         console.log("README is generated in the dist folder!")
     }
-}
-
-// TODO: Create a function to initialize app
-function init(questionPrompt) {
-    saveFile(questionPrompt);
 }
 
 // Function call to initialize app
