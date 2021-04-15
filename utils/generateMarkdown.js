@@ -5,11 +5,9 @@ function renderLicenseBadge(license) {
     return "";
   } else {
 
-    //var modifiedLicense = license.replace(" ",)
+    var modifiedLicense = license.replace(" ", "_")
 
-    return `
-![Badge for License](https://img.shields.io/badge/license-${license}-blueviolet)
-    `
+    return `![Badge for License](https://img.shields.io/badge/license-${modifiedLicense}}-blueviolet)`
   }
 }
 
