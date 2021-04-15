@@ -1,7 +1,7 @@
 
-  # Bleezys project
+  # f
 
   
-  ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
+![Badge for License](https://img.shields.io/badge/license-GNU GPLv3-blueviolet)
     
 

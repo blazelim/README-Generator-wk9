@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
     //var modifiedLicense = license.replace(" ",)
 
     return `
-    ![Badge for License](https://img.shields.io/badge/license-${license}-blueviolet)
+![Badge for License](https://img.shields.io/badge/license-${license}-blueviolet)
     `
   }
 }
@@ -27,6 +27,7 @@ function renderLicenseSection(license) {
   if (license === "none") {
     return "";
   }
+  
 }
 
 // TODO: Create a function to generate markdown for README
