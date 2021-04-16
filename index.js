@@ -23,7 +23,7 @@ const questions = [
     {
         type:'input',
         name:'name',
-        message:'What is the name of your project?',
+        message:'What is the name of your project? (Required)',
         validate: projectNameInput =>{
             if (projectNameInput){
                 return true
