@@ -10,10 +10,14 @@ Additional features of the README generator include:
 * An automatic license generator, fit with a badge generator and an automatically generated link to the license.
 
 ## Table of Contents
+* [Video Walkthrough for Installation and Usage](#video-walkthrough-for-installation-and-usage)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Questions](#questions)
+
+## Video Walkthrough for Installation and Usage
+https://drive.google.com/file/d/1Lju7d43jtAjhlM5xxZEdirSLjsIWLt75/view?usp=sharing
 
 ## Installation
 ![Download the Code](./media/downloadproject.png)
