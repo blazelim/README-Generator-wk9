@@ -1,21 +1,18 @@
 
-# Jest Another RPG
+# Note Taker
 ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
 
 ## Description
-Goblins! Orcs! Living Skeletons! Dive into a fantasy RPG world and fight monsters, all in the comfort of your own command line interface. Use potions, loot them from enemies and get strong enough to defeat all your enemies. Jest Another RPG is a command line interface javascript program that you can control using inquirer. You have a choice, attack the enemy or use a potion to make yourself stronger!
+Have you ever needed to take a note on the go? Well now you can! Note Taker is a simple note taking program that can save all your notes online on the wonderful heroku server! Functionality includes creating a new note by clicking the pencil in the top right, saving the note via the save button on the top right, and deleting notes via the trash buttons on the left. Additionally you can view previously made notes via clicking the title of the notes on the left hand column.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#contributing)
 * [License](#license)
 * [Questions](#questions)
 ## Installation
-Download the files, either by cloning or downloading the zip file. If downloading the zip file, be sure to extract it. Navigate to the root directory of the program in your command line interface and run 'npm install' to install any dependencies and the program is ready to go.
+Simply go to the link below and you're set to go!
 ## Usage
-Simply type in 'node app.js' in the root directory of the program while in your CLI and follow the prompts on the screen.
-## Contributing
-Feel free to send me any ideas you have to improve the project. You may also branch off of my project and make it your own. Be sure to attribute to me any necessary credit!
+Creating a new note, Deleting a note
 
 ## License
 This project is covered under the MIT license.
