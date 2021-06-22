@@ -1,18 +1,15 @@
 
-# Note Taker
+# Budget Tracker
 ![Badge for License](https://img.shields.io/badge/license-MIT-blueviolet)
 
 ## Description
-Have you ever needed to take a note on the go? Well now you can! Note Taker is a simple note taking program that can save all your notes online on the wonderful heroku server! Functionality includes creating a new note by clicking the pencil in the top right, saving the note via the save button on the top right, and deleting notes via the trash buttons on the left. Additionally you can view previously made notes via clicking the title of the notes on the left hand column.
+Having trouble remembering how much money you have left in your budget? Find yourself having trouble checking as internet connections sometimes get spotty? Have no fear as Budget Tracker is here. Budget Tracker is a simple, barebones program that lets you keep track of your finances with a simple add and subtract tracking system. Additionally, Budget Tracker has been fitted with offline functionality that will automatically upload any changes to the server whenever you do find an internet connection.
 ## Table of Contents
-* [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Questions](#questions)
-## Installation
-Simply go to the link below and you're set to go!
 ## Usage
-Creating a new note, Deleting a note
+Simply Navigate to the following Website. You may also download the PWA application if that strikes your fancy
 
 ## License
 This project is covered under the MIT license.
